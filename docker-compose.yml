@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    environment:
+      POSTGRES_USER: your_user
+      POSTGRES_PASSWORD: your_password
+      POSTGRES_DB: your_database
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: node_app
+    depends_on:
+      - postgres
+    environment:
+      DATABASE_URL: "postgresql://your_user:your_password@postgres:5432/your_database"
+    ports:
+      - "3000:3000"
+    entrypoint: ["sh", "-c", "npx prisma migrate deploy && npm start"]
+
+volumes:
+  postgres_data:

@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "@prisma/client": "^5.19.1"
+  },
+  "scripts": {
+    "dev": "node script.js",
+    "start": "node script.js"
+  },
+  "devDependencies": {
+    "prisma": "^5.19.1"
+  }
+}
