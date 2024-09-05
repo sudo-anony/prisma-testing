@@ -4,7 +4,7 @@ This guide will walk you through installing WSL and Docker, and getting Docker u
 
 ## Prerequisites
 
-- **Windows 10/11** (Ensure your system is up to date).
+- **Windows 11** (Ensure your system is up to date).
 
 ## Installation Steps
 
