@@ -25,7 +25,7 @@ This guide will walk you through installing WSL and Docker, and getting Docker u
 docker compose up --build
 ```
 
-# Docker and WSL Installation Guide For Mac/ Linux
+# Docker For Mac/ Linux
 ```bash
 sudo apt update
 sudo apt install apt-transport-https ca-certificates curl software-properties-common
